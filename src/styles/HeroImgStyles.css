@@ -1,0 +1,64 @@
+.mask {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.mask img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.mask::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+}
+
+.hero .content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
+
+.hero .content p {
+  font-size: 2.5rem;
+}
+
+.hero .content h1 {
+  font-size: 6rem;
+  margin: 1rem 0;
+}
+
+.hero .content div {
+  display: flex;
+}
+
+.hero .content .btn:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .hero .content h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero .content p {
+    font-size: 2rem;
+  }
+}
